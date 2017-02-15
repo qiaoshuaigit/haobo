@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+  <bean id="userService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserService</value></property>
+  </bean>
+  
+  <bean id="loanService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanService</value></property>
+  </bean>
+  
+  <bean id="loanInvestorService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanInvestorService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanInvestorService</value></property>
+  </bean>
+
+  <bean id="borrowerInfoService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/borrowerInfoService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IBorrowerInfoService</value></property>
+  </bean>
+  
+  <bean id="userPicService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userPicService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserPicService</value></property>
+  </bean>
+  
+  <bean id="authenRecordService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/authenRecordService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IAuthenRecordService</value></property>
+  </bean>
+  
+  <bean id="loanPicService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanPicService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanPicService</value></property>
+  </bean>
+  
+  <bean id="bankCardService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/bankCardService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IBankCardService</value></property>
+  </bean>
+  
+  <bean id="ipAddressLocationService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/ipAddressLocationService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IIpAddressLocationService</value></property>
+  </bean>
+  
+  <bean id="loanCommentService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanCommentService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanCommentService</value></property>
+  </bean>
+
+  <bean id="loanManageService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanManageService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanManageService</value></property>
+  </bean>
+    
+  <bean id="thirdPartyService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/thirdPartyService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IThirdPartyService</value></property>
+  </bean>
+  
+  <bean id="innerMailService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/innerMailService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IInnerMailService</value></property>
+  </bean>
+  
+  <bean id="userNoticeService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userNoticeService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserNoticeService</value></property>
+  </bean>
+  
+  <bean id="investorService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/investorService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IInvestorService</value></property>
+  </bean>
+  
+  <bean id="cashWithdrawService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/cashWithdrawService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ICashWithdrawService</value></property>
+  </bean>
+  
+  <bean id="blackListService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/blackListService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IBlackListService</value></property>
+  </bean>
+  
+  <bean id="borrowerService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/borrowerService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IBorrowerService</value></property>
+  </bean>
+  
+  <bean id="notificationConfigService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/notificationConfigService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.INotificationConfigService</value></property>
+  </bean>
+  
+  <bean id="userSecurityQuestionService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userSecurityQuestionService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserSecurityQuestionService</value></property>
+  </bean>
+  
+  
+  <bean id="creditMaterialService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/creditMaterialService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ICreditMaterialService</value></property>
+  </bean>
+  
+  <bean id="creditRightsService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/creditRightsService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ICreditRightsService</value></property>
+  </bean>
+  <!-- 
+  <bean id="loanQuestionAnswerService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanQuestionAnswerService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanQuestionAnswerService</value></property>
+  </bean>
+   -->
+   
+  <bean id="loanQuartzService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/loanQuartzService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ILoanQuartzService</value></property>
+  </bean>
+  
+  <bean id="collectionService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/collectionService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.ICollectionService</value></property>
+  </bean>
+  
+  <bean id="userStatisticService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userStatisticService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserStatisticService</value></property>
+  </bean>
+  
+  <bean id="platformStatisticsService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/platformStatisticsService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IPlatformStatisticsService</value></property>
+  </bean>
+  
+  <bean id="userInvitedService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userInvitedService</value></property>
+    <property name="serviceInterface"><value>net.zkbc.p2p.api.service.UserInvitedService</value></property>
+  </bean>
+  
+  <bean id="userVipInvestorService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userVipInvestorService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserVipInvestorService</value></property>
+  </bean>
+  
+  <bean id="userAutoInvestService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/userAutoInvestService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IUserAutoInvestService</value></property>
+  </bean>
+  
+  <bean id="financialReportService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/financialReportService</value></property>
+    <property name="serviceInterface"><value>com.zkbc.core.service.IFinancialReportService</value></property>
+  </bean>
+  
+  <bean id="messageTemplateService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+    <property name="serviceUrl"><value>${core.server:http://localhost:12081}/remoting/messageTemplateService</value></property>
+    <property name="serviceInterface"><value>net.zkbc.p2p.api.service.MessageTemplateService</value></property>
+  </bean>
+  
+  <bean id="messageTemplate" class="com.zkbc.core.util.MessageTemplate">
+    <property name="thirdPartyService" ref="thirdPartyService"></property>
+    <property name="innerMailService" ref="innerMailService"></property>
+    <property name="notificationConfigService" ref="notificationConfigService"></property>
+    <property name="userService" ref="userService"></property>
+    <property name="loanService" ref="loanService"></property>
+    <property name="messageTemplateService" ref="messageTemplateService"></property>
+    <property name="loanInvestorService" ref="loanInvestorService"></property>
+  </bean>
+</beans>

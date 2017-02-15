@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="financial-api">
+		<class>net.zkbc.financial.accounting.entity.CatalogApply</class>
+		<class>net.zkbc.financial.accounting.entity.CatalogApplyPK</class>
+		<class>net.zkbc.financial.accounting.entity.Daily</class>
+		<class>net.zkbc.financial.accounting.entity.DailyPK</class>
+		<class>net.zkbc.financial.accounting.entity.Catalog</class>
+		<class>net.zkbc.financial.accounting.entity.Entry</class>
+		<class>net.zkbc.financial.accounting.entity.EntryPK</class>
+	</persistence-unit>
+</persistence>
